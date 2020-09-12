@@ -1,1 +1,1 @@
-[{'type': 'TROPICAL STORM', 'name': 'NANA', 'distance': 442}, {'type': 'Tropical Depression', 'name': 'OMAR', 'distance': 2666}]
+[{'type': 'TROPICAL STORM', 'name': 'PAULETTE', 'distance': 2982}, {'type': 'Tropical Depression', 'name': 'RENE', 'distance': 4242}, {'type': 'Tropical Storm', 'name': 'SALLY', 'distance': 742}, {'type': 'Tropical Depression', 'name': 'TWENTY', 'distance': 5775}]

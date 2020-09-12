@@ -119,7 +119,7 @@ async def latest_python_pubs(message: types.Message):
     articles_list = pypubs.parse_new()
     if articles_list:
         for art in articles_list:
-            time.sleep(random.randrange(20, 60))
+            time.sleep(random.randrange(4, 8))
             inline_kb = InlineKeyboardMarkup()
             inline_kb.add(InlineKeyboardButton(f"open {str(art['post_title']).upper()}...", url=art['post_link']))
             await bot.send_message(789561316, f"{art['post_title']}   {art['post_link']}", parse_mode='HTML', reply_markup=inline_kb)
@@ -141,7 +141,7 @@ async def echo(message: types.Message):
 
 # запускаем лонг поллинг
 if __name__ == '__main__':
-    dp.loop.create_task(python_articles_scheduled(60))  # пока что оставим 10 секунд (в качестве теста)
+    dp.loop.create_task(python_articles_scheduled(60*5))  # пока что оставим 10 секунд (в качестве теста)
     dp.loop.create_task(nhc_scheduled(12*60*60))  # пока что оставим 10 секунд (в качестве теста)
     # dp.loop.create_task(d3_scheduled(60*60*6))  # пока что оставим 10 секунд (в качестве теста)
     executor.start_polling(dp, skip_updates=True)
